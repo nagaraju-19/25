@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Plant Disease Detection</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image" accept="image/*" capture="camera">
+
+<button type="submit">Detect Disease</button>
+
+</form>
+
+{% if disease %}
+
+<h3>Disease : {{disease}}</h3>
+
+<p><b>Cure:</b> {{cure}}</p>
+
+<p><b>Pesticide:</b> {{pesticide}}</p>
+
+<p><b>Amount:</b> {{amount}}</p>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
